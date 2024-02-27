@@ -15,3 +15,9 @@ A virtual environment is recommended but not necessary.
 > Example: 
 >> python monte_carlo_pi.py
 
+## Copyright and License Information
+
+This software is provided as-is, without any warranty, without any liability.
+It is provided under GPLv3. 
+Feel free to use this for demonstration purposes. 
+In case you do some improvements it would by nice to hear back from you and/or mirror them back with me and this project.  
