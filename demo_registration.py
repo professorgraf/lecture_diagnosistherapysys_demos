@@ -68,7 +68,6 @@ class UIRegistrationDemo:
             for marker in self.canvas_template.get_marker_list():
                 self.canvas_reference.add_marker_at(marker.position[0], marker.position[1])
 
-
     def create_paired_pointlist(self):
         list1 = self.canvas_template.get_marker_list()
         len1 = len(list1)
@@ -76,7 +75,7 @@ class UIRegistrationDemo:
         len2 = len(list2)
         minlen = min(len1, len2)
         if len1 != len2:
-            tk.messagebox.showinfo(message="Number of points differ, just taking the first {} points".format(minlen))
+            tk.messagebox.showinfo(message="Number of points differ, just using the first {} points".format(minlen))
         arr = np.zeros((minlen, 2, 2))  # number of points, 2 = a pair, 2 = number of coords
         for i in range(0, minlen):
             arr[i, 0, :] = np.array(list1[i].position)
