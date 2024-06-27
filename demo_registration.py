@@ -1,3 +1,13 @@
+# Demo registration application
+#   - work in progress -
+#   - basis for assignments in my lectures -
+#
+#  (c) 2024 - Prof. Dr. Markus Graf
+#  Faculty of Informatics, University of Applied Sciences Heilbronn
+#
+#  Gnu GPL 3.0
+#
+
 
 import tkinter as tk
 from tkinter import ttk, messagebox
