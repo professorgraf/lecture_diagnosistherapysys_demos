@@ -11,6 +11,7 @@
 import numpy as np
 import pydicom
 import tkinter as tk
+import os
 from tkinter import filedialog
 from tkinter import ttk
 from PIL import Image, ImageTk
@@ -26,6 +27,8 @@ class MedicalImageViewer:
         # load the image
         self.load_button = tk.Button(root, text="Load Image...", command=self.load_image)
         self.load_button.pack(side=tk.TOP)
+        self.img_title = tk.Label(root, text="-")
+        self.img_title.pack(side=tk.TOP)
 
         # display the image
         self.image_label = tk.Label(root)
@@ -45,6 +48,7 @@ class MedicalImageViewer:
     def load_image(self):
         file_path = filedialog.askopenfilename()
         if file_path:
+            self.image
             # self.image = np.array(Image.open(file_path)) # cv2.imread(file_path, cv2.IMREAD_GRAYSCALE)
             dicom_image = pydicom.dcmread(file_path)
             self.image = np.array(dicom_image.pixel_array, dtype=int)
@@ -55,6 +59,7 @@ class MedicalImageViewer:
 
             print(f"min: {self.image.min()}, max: {self.image.max()}")
             if self.image is not None:
+                self.img_title.config(text=os.path.split(file_path)[1])
                 self.display_image()
 
     def apply_level_window(self, image, level, window):
