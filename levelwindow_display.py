@@ -48,7 +48,6 @@ class MedicalImageViewer:
     def load_image(self):
         file_path = filedialog.askopenfilename()
         if file_path:
-            self.image
             # self.image = np.array(Image.open(file_path)) # cv2.imread(file_path, cv2.IMREAD_GRAYSCALE)
             dicom_image = pydicom.dcmread(file_path)
             self.image = np.array(dicom_image.pixel_array, dtype=int)
