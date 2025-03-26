@@ -8,7 +8,7 @@ In order to run the demos, first setup python environment by installing requirem
 A virtual environment is recommended but not necessary. 
 
 > Install requirements with pip 
->> pip install requirements.txt 
+>> pip install -r requirements.txt 
 
 >Start python code (each sample currently is in a single .py file)
 > 

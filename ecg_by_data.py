@@ -102,7 +102,8 @@ def export_data(sim, filename, total_ticks=1024, delta_millis=20):
 if __name__ == '__main__':
     sim = EcgSim("data/100.dat")
     sim.load_data_212()
-    export_data(sim, "data/export.bytes")
+    # xexport_data(sim, "data/export.bytes")
+    export_matplot(sim)
 
 
 
